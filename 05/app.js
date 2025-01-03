@@ -10,7 +10,7 @@ currParent.appendChild(newButton);
 
 // 2
 const currSiblings = Array.from(currParent.children);
-currSiblings.forEach(el => el.classList.add('siblings'));
+currSiblings.filter((el) => !el.classList.contains('js-curr')).forEach(el => el.classList.add('siblings'));
 
 // 3
 currParent.nextElementSibling.setAttribute('title', 'nextElementSibling');
